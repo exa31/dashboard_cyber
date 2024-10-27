@@ -7,7 +7,7 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 
 export default function useLogin({ onError }: { onError: () => void }) {
-    const [cookies, setCookie] = useCookies(['token']);
+    const [, setCookie] = useCookies(['token']);
     const nameContext = useContext(NameProvider);
     const { setName } = nameContext!;
     const navigate = useNavigate();
